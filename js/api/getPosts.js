@@ -1,3 +1,4 @@
+import { displayError } from "../ui/displayError.js";
 
 const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts";
 const postsContainer = document.querySelector(".posts");
@@ -14,16 +15,19 @@ export async function getPosts() {
 
     const getResults = await response.json();
     console.log(getResults)
-    // createPosts(getResults);
+    createPosts(getResults);
   } catch (error) {
-    postsContainer.innerHTML = displayError("An error occured when uploading the products from the server!"
+    postsContainer.innerHTML = displayError("An error occured when uploading the posts from the server!"
     );
   }
 }
 
 
-// export function createPosts(details) {
-  
-//     postsContainer.innerHTML = "";
-//     postsContainer.innerHTML += ;
-// }
+export function createPosts(details) {
+    postsContainer.innerHTML = "";
+    details.forEach(function(detail) {
+      postsContainer.innerHTML += `<a href="blogPost.html?id=${detail.id}"><div>${detail.title.rendered}</div></a>`;
+    });
+    
+}
+
