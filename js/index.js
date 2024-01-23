@@ -6,9 +6,10 @@ import { blogPostPage } from "./pages/blogPostPage.js";
 if (window.location.pathname === "/index.html") {
   homePage();
 } else if (window.location.pathname === "/blog.html") {
-  blogPage();
-} else if (window.location.pathname === "/blogPost.html") {
+  blogPage();}
+ else if (window.location.pathname === "/blogPost.html") {
   blogPostPage();
-} else {
+} 
+else {
   console.log("error");
 }
