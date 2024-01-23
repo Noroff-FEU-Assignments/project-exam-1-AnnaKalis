@@ -1,10 +1,10 @@
-// export async function getPosts()
+
 const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts";
-const productsContainer = document.querySelector(".products");
+const postsContainer = document.querySelector(".posts");
 
-productsContainer.innerHTML = `<div class="loader"></div>`;
+postsContainer.innerHTML = `<div class="loader"></div>`;
 
-async function getProducts() {
+export async function getPosts() {
   try {
     const response = await fetch(url);
 
@@ -13,11 +13,17 @@ async function getProducts() {
     }
 
     const getResults = await response.json();
-    createProducts(getResults);
+    console.log(getResults)
+    // createPosts(getResults);
   } catch (error) {
-    productsContainer.innerHTML = displayError("An error occured when uploading the products from the server!"
+    postsContainer.innerHTML = displayError("An error occured when uploading the products from the server!"
     );
   }
 }
 
-getProducts();
+
+// export function createPosts(details) {
+  
+//     postsContainer.innerHTML = "";
+//     postsContainer.innerHTML += ;
+// }
