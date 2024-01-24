@@ -14,7 +14,7 @@ function createPost(details) {
   console.log(details);
 }
 
-export async function setUpBlogPostPage() {
+export async function getPost() {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const id = params.get("id");
@@ -28,9 +28,13 @@ export async function setUpBlogPostPage() {
     if (!response.ok) {
       throw new Error(`Network response was not ok (status: ${response.status})`);
     }
-    const getResult = await response.json();
-    createPost(getResult);
+    return await response.json();
   } catch (error) {
     postContainer.innerText = displayError("An error occured when uploading the product from the server!");
   }
+}
+
+export async function setUpBlogPostPage() {
+    const getResult = await getPost();
+    createPost(getResult);
 }
