@@ -1,13 +1,23 @@
 import { displayError } from "../ui/displayError.js";
 
+const postsContainer = document.querySelector(".posts");
+const loaderContainer = document.createElement("div");
 
-export async function setUpBlogPage() {
-  
-  const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts";
-  const postsContainer = document.querySelector(".posts");
+function createPosts(details) {
+  details.forEach(function (detail) {
+    loaderContainer.classList.remove("loader");
+    const a = document.createElement("a");
+    a.innerText = detail.title.rendered;
+    a.href = "/blogpost/index.html?id=" + detail.id;
+    postsContainer.append(a);
+  });
+}
 
-  postsContainer.innerHTML = `<div class="loader"></div>`;
-  
+export async function getPosts() {
+  loaderContainer.classList.add("loader");
+  postsContainer.append(loaderContainer);
+  const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts" + "?_embed";
+
   try {
     const response = await fetch(url);
 
@@ -15,14 +25,13 @@ export async function setUpBlogPage() {
       throw new Error(`Network response was not ok (status: ${response.status})`);
     }
 
-    const getResults = await response.json();
-    postsContainer.innerHTML = "";
-    getResults.forEach(function(detail) {
-      postsContainer.innerHTML += `<a href="/blogpost/index.html?id=${detail.id}"><div>${detail.title.rendered}</div></a>`;
-    });
-
+    return await response.json();
   } catch (error) {
-    postsContainer.innerHTML = displayError("An error occured when uploading the posts from the server!"
-    );
+    postsContainer.innerHTML = displayError("An error occured when uploading the posts from the server!");
   }
+}
+
+export async function setUpBlogPage() {
+  const getResults = await getPosts();
+  createPosts(getResults);
 }
