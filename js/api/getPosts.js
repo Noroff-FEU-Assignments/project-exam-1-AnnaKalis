@@ -2,10 +2,12 @@ import { displayError } from "../ui/displayError.js";
 
 
 export async function getPosts() {
+  
   const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts";
   const postsContainer = document.querySelector(".posts");
 
   postsContainer.innerHTML = `<div class="loader"></div>`;
+  
   try {
     const response = await fetch(url);
 
