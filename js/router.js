@@ -4,7 +4,7 @@ import { setUpContactPage } from "./pages/contact.js";
 import { homePage } from "./pages/home.js";
 import { setUpBlogPostPage } from "./pages/blogPost.js";
 
-// Router
+
 
 export function router() {
   switch (window.location.pathname) {
@@ -21,7 +21,6 @@ export function router() {
     case "/blog/":
     case "/blog":
     case "/blog/index.html":
-      console.log("Blog page");
       setUpBlogPage();
       break;
     case "/blogpost/":
