@@ -1,6 +1,8 @@
-import { homePage } from "./pages/homePage.js";
-import { blogPage } from "./pages/blogPage.js";
-import { blogPostPage } from "./pages/blogPostPage.js";
+
+import { setUpBlogPage } from "./pages/blog.js";
+import { setUpContactPage } from "./pages/contact.js";
+import { homePage } from "./pages/home.js";
+import { setUpBlogPostPage } from "./pages/blogPost.js";
 
 // Router
 
@@ -20,18 +22,19 @@ export function router() {
     case "/blog":
     case "/blog/index.html":
       console.log("Blog page");
-      blogPage();
+      setUpBlogPage();
       break;
     case "/blogpost/":
     case "/blogpost":
     case "/blogpost/index.html":
       console.log("Blog post page");
-      blogPostPage();
+      setUpBlogPostPage();
       break;
     case "/contact/":
     case "/contact":
     case "/contact/index.html":
       console.log("Contact page");
+      setUpContactPage
       break;
     default:
       console.log("404 - not found");

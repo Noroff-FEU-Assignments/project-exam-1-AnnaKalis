@@ -1,6 +1,6 @@
 import { getPosts } from "../api/getPosts.js";
 
-export function blogPage() {
+export function setUpBlogPage() {
   console.log("blog page working");
   getPosts();
 }
