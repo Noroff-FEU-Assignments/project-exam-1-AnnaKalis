@@ -19,3 +19,7 @@
     color: inherit;
     display: block;
   }
+
+  ul {
+    list-style-type: none;
+  }
