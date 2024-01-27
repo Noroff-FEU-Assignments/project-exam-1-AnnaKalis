@@ -5,10 +5,15 @@ const loaderContainer = document.createElement("div");
 
 function createPost(details) {
   loaderContainer.classList.remove("loader");
+  const postImage = document.createElement("img");
   const postTitle = document.createElement("h1");
   const postText = document.createElement("div");
+  postContainer.append(postImage)
   postContainer.append(postTitle);
   postContainer.append(postText);
+  postImage.src = details._embedded['wp:featuredmedia'][0].source_url
+  postImage.alt = details._embedded['wp:featuredmedia'][0].alt_text
+  postImage.classList.add("featured-blogpost-image")
   postTitle.innerText = details.title.rendered;
   postText.innerHTML = details.content.rendered;
   console.log(details);
@@ -35,6 +40,6 @@ export async function getPost() {
 }
 
 export async function setUpBlogPostPage() {
-    const getResult = await getPost();
-    createPost(getResult);
+  const getResult = await getPost();
+  createPost(getResult);
 }

@@ -16,7 +16,7 @@ function createPosts(details) {
 export async function getPosts() {
   loaderContainer.classList.add("loader");
   postsContainer.append(loaderContainer);
-  const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts" + "?_embed";
+  const url = "https://thrive.annakalis.com/wp-json/wp/v2/posts" + "?per_page=50&_embed";
 
   try {
     const response = await fetch(url);
