@@ -24,16 +24,25 @@
       </nav>
     </header>
     <main>
-      <h1>Contact</h1>
+      <h1>Welcome to the contact page!</h1>
+      <p>
+        I'd love to hear from you. Whether you have questions, feedback, or just want to say hello, feel free
+        to reach out. Let's start a conversation and build a thriving community together. Use the form below
+        to connect, and I'll get back to you soon.
+      </p>
+      <img
+        src="../images/portrait-Catherine.jpg"
+        alt="Portrait of the smiling women in her fourties, author of the mental health blog, has blod hair and brown eyes."
+      />
       <form name="contact">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" required/>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
+        <input type="email" name="email" id="email" required/>
         <label for="subject">Subject</label>
-        <input type="text" name="subject" id="subject" />
+        <input type="text" name="subject" id="subject" required/>
         <label for="message">Message</label>
-        <textarea name="message" id="message" placeholder="Write your message..."></textarea>
+        <textarea name="message" id="message" placeholder="Write your message..." required></textarea>
         <button>Send</button>
       </form>
     </main>
