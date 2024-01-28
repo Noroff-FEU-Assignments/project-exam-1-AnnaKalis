@@ -63,9 +63,8 @@ h2{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     gap: 30px;
-    max-width: 60vw;
-    padding:30px;
-    margin: 0 auto;
+    max-width: 90vw;
+    margin: 30px auto;
 }
 
 .welcome-text{
