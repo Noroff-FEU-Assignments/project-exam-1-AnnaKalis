@@ -100,5 +100,10 @@ p {
   text-transform: uppercase;
   font-family: Roboto, var(--font-fallback-roboto);
   font-size: 1.1rem;
-  
 }
+
+.newsletter{
+    background-color: var(--background-color-newsletter);
+}
+
+.newsletter h2
