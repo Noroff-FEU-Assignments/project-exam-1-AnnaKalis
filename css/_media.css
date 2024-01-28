@@ -1,1 +1,8 @@
 /* In this file are media queries included */
+
+@media (max-width: 1300px) {
+  .welcome {
+    padding: 0px;
+    max-width: 90vw;
+  }
+}
