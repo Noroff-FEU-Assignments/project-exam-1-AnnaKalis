@@ -1,7 +1,42 @@
+/* In this file  are colour and typography included. */
+
+:root {
+  /* colours */
+  --background-header-footer: rgba(237, 240, 242, 1);
+  --background-nav-mobile: rgba(247, 247, 247, 1);
+  --background-color-newsletter:rgba(221, 225, 220, 1);
+  --text-color-nav: rgba(22, 30, 38, 1);
+  --picture-overlay-green: rgba(154, 166, 151, 0.9);
+  --picture-overlay-blue: rgba(79, 93, 107, 0.87);
+  --dark-button-color: rgba(37, 51, 64, 1);
+  --dark-button-color-hover: rgba(37, 51, 64, 0.8);
+  --dark-button-text-color: rgba(237, 240, 242, 1);
+  --light-button-color: rgba(255, 255, 255, 1);
+  --light-button-color-hover:rgba(238, 239, 237, 1);
+  --text-color-heading-blue: rgba(44, 61, 77, 1);
+  --text-color-blue: rgba(22, 30, 38, 1);
+  --text-color-heading-green: rgba(31, 33, 30, 1);
+  --text-color-green: rgba(31, 33, 30, 1);
+  --form-text-color: rgba(72, 72, 72, 1);
+  --form-frame-color: rgba(72, 72, 72, 1);
+  --form-background-color:rgba(255, 255, 255, 1);
+  --line-color: rgba(79, 93, 107, 1);
+  
+  /*typography*/
+--font-fallback-lora:;
+--font-fallback-roboto:;
+
+}
+
+header,
+footer {
+  background-color: var(--background-header-footer);
+}
+
 .featured-blogpost-image {
-    width:100%;
-    object-fit: cover;
-    object-position: center;
-    aspect-ratio: 16/9;
-    overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }

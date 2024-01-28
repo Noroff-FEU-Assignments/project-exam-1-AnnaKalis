@@ -1,0 +1,14 @@
+/* In this file is styling with flex, grid, margins, padding, and  similar included */
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: 0 auto;
+    flex: 1;
+}
