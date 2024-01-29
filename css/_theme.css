@@ -60,7 +60,8 @@ body {
   overflow: hidden;
 }
 
-.intro {
+.intro,
+.collaborate {
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(0deg, var(--picture-overlay-blue), var(--picture-overlay-blue)),
@@ -70,7 +71,8 @@ body {
   overflow: hidden;
 }
 
-.intro-container {
+.intro-container,
+.collaborate-container {
   background-color: var(--background-text);
 }
 h1,
