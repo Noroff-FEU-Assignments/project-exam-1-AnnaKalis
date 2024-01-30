@@ -1,3 +1,26 @@
 /* In this file are media queries included */
+@media (max-width: 1500px) {
+  .about-story-text-1,
+  .about-story-img
+   {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-welcome-img,
+  .about-welcome-text {
+    grid-column: span 2;
+  }
+
+}
+
+@media (max-width: 950px) {
+  
+  .welcome-text,
+  .welcome-img {
+    grid-column: span 2;
+  }
+}
 
 

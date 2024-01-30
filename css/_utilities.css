@@ -15,7 +15,7 @@ main {
   text-align: center;
 }
 
-header{
+header {
   position: fixed;
   width: 100vw;
 }
@@ -30,7 +30,6 @@ nav,
   align-items: center;
 }
 
-
 header img {
   padding: 30px;
   width: 250px;
@@ -41,11 +40,11 @@ nav a,
   padding-right: 50px;
 }
 .nav-footer a,
-.social-media a{
+.social-media a {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.social-media img{
+.social-media img {
   width: 30px;
 }
 
@@ -77,20 +76,37 @@ h2 {
   margin-top: 30px;
 }
 
-.welcome {
+.welcome,
+.about-welcome,
+.about-story {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  max-width: 80vw;
+  width: 80vw;
   margin: 50px auto;
 }
 
-.welcome-text {
+.welcome-text,
+.about-welcome-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   text-align: left;
+}
+
+.welcome-text{
+  align-items: center;
+}
+.about-welcome-text{
+  align-items: left;
+}
+.about-story-text-1,
+.about-story-text-2 {
+  text-align: left;
+}
+
+.about-story-text-2 {
+  grid-column: span 2;
 }
 
 img {
@@ -102,12 +118,12 @@ img {
 
 .newsletter-container {
   display: block;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 
 input {
   padding: 5px;
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 1rem;
 }
 
@@ -115,7 +131,14 @@ input {
   width: 30vw;
 }
 
-.copyright{
+.copyright {
   width: auto;
   padding-left: 30px;
+}
+
+.cta-about{
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-top: 0px;
+
 }
