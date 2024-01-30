@@ -94,10 +94,10 @@ h2 {
   text-align: left;
 }
 
-.welcome-text{
+.welcome-text {
   align-items: center;
 }
-.about-welcome-text{
+.about-welcome-text {
   align-items: left;
 }
 .about-story-text-1,
@@ -123,8 +123,16 @@ img {
 
 input {
   padding: 5px;
-  margin-top: 50px;
-  font-size: 1rem;
+  margin-top: 5px;
+}
+
+label,
+textarea {
+  display: block;
+}
+textarea,
+.contact-info-text {
+  margin: 0 auto;
 }
 
 .line {
@@ -136,9 +144,35 @@ input {
   padding-left: 30px;
 }
 
-.cta-about{
+.cta-about {
   display: inline-block;
   margin-bottom: 50px;
   margin-top: 0px;
+}
 
+.contact-info {
+  width: 80vw;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.contact-info-form-and-text {
+  padding: 50px 0;
+}
+
+.contact-input,
+.contact-info-text {
+  width: 90%;
+}
+
+.contact-textarea {
+  min-height: 150px;
+}
+
+.contact-info-img {
+  align-self: center;
+  max-height: 75vh;
 }

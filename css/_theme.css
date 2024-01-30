@@ -104,8 +104,14 @@ p {
   font-size: 1.1rem;
 }
 
-.newsletter{
+.newsletter,
+.contact-info-form-and-text {
     background-color: var(--background-color-newsletter);
 }
 
+input,
+textarea {
+  font-size: 1rem;
+  font-family: Roboto, var(--font-fallback-roboto);
+}
 .newsletter h2
