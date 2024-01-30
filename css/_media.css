@@ -18,7 +18,8 @@
 
 @media (max-width: 950px) {
   .welcome-text,
-  .welcome-img {
+  .welcome-img,
+  .post-container {
     grid-column: span 2;
   }
 

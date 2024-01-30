@@ -5,11 +5,24 @@ const loaderContainer = document.createElement("div");
 
 function createPosts(details) {
   details.forEach(function (detail) {
-    loaderContainer.classList.remove("loader");
+    // loaderContainer.classList.remove("loader");
+    loaderContainer.style.display = "none";
+    const container = document.createElement("div");
+    const img = document.createElement("img");
+    const link = document.createElement("a");
     const a = document.createElement("a");
+    link.href = "/blogpost/index.html?id=" + detail.id;
+    img.src = detail._embedded["wp:featuredmedia"][0].source_url;
+    img.alt = detail._embedded["wp:featuredmedia"][0].alt_text;
     a.innerText = detail.title.rendered;
     a.href = "/blogpost/index.html?id=" + detail.id;
-    postsContainer.append(a);
+    img.classList.add("featured-image");
+    a.classList.add("post-title")
+    container.classList.add("post-container");
+    link.append(img);
+    postsContainer.append(container);
+    container.append(link);
+    container.append(a);
   });
 }
 

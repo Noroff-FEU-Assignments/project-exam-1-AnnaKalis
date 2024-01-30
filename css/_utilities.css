@@ -18,7 +18,10 @@ main {
 header {
   position: fixed;
   width: 100vw;
+  z-index: 100;
 }
+
+
 header,
 nav,
 .footer,
@@ -78,7 +81,8 @@ h2 {
 
 .welcome,
 .about-welcome,
-.about-story {
+.about-story,
+.posts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -175,4 +179,16 @@ textarea,
 .contact-info-img {
   align-self: center;
   max-height: 75vh;
+}
+
+
+.featured-image {
+  min-height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  position:relative;
+}
+
+.post-title{
+  text-align: left;
 }

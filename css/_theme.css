@@ -76,9 +76,13 @@ body {
   background-color: var(--background-text);
 }
 h1,
-h2 {
+h2,
+.post-title {
   color: var(--text-color-heading-blue);
   font-weight: 600;
+}
+.post-title {
+  font-size: 1.1rem;
 }
 
 h2 {
@@ -114,4 +118,4 @@ textarea {
   font-size: 1rem;
   font-family: Roboto, var(--font-fallback-roboto);
 }
-.newsletter h2
+/* .newsletter h2 */
