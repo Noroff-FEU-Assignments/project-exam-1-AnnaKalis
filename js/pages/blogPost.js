@@ -46,7 +46,7 @@ export async function getPost() {
     }
     return await response.json();
   } catch (error) {
-    postContainer.innerText = displayError("An error occured when uploading the product from the server!");
+    postContainer.innerText = displayError("An error occured when uploading the post from the server!");
   }
 }
 

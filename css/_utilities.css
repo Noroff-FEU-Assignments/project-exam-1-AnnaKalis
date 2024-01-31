@@ -31,6 +31,15 @@ nav,
   justify-content: space-between;
   align-items: center;
 }
+.footer{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-footer,
+.social-media{
+  margin: 0px auto;
+}
 
 header img {
   padding: 30px;
@@ -42,10 +51,12 @@ nav a,
   padding-right: 50px;
 }
 .nav-footer a,
-.social-media a {
+.social-media a
+{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .social-media img {
   width: 30px;
 }
@@ -213,6 +224,9 @@ textarea,
   text-align: left;
 }
 
+.wp-block-pullquote p{
+  text-align: center;
+}
 
 .blog-post-intro h1 {
   margin: 30px auto 0px;

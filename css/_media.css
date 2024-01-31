@@ -3,15 +3,14 @@
   .about-story-text-1,
   .about-story-img,
   .contact-info-img,
-  .contact-info-form-and-text  {
+  .contact-info-form-and-text {
     grid-column: span 2;
   }
 }
 
 @media (max-width: 1200px) {
   .about-welcome-img,
-  .about-welcome-text,
-  {
+  .about-welcome-text {
     grid-column: span 2;
   }
 }
@@ -22,6 +21,19 @@
   .post-container {
     grid-column: span 2;
   }
+}
 
+@media (max-width: 750px) {
+  .nav-footer a {
+    padding-bottom: 0px;
+  }
 
+.nav-footer a,
+.social-media a {
+  padding-right: 30px;
+}
+
+  footer {
+    font-size: 1rem;
+  }
 }
