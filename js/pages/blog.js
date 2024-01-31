@@ -2,7 +2,7 @@ import { displayError } from "../ui/displayError.js";
 
 const postsContainer = document.querySelector(".posts");
 const loaderContainer = document.createElement("div");
-const loadMoreButton = document.getElementById("load-more-btn");
+const loadMoreButton = document.createElement("button");
 
 let posts = [];
 let postsLoaded = 0;
@@ -15,24 +15,24 @@ function loadMore() {
 
 function createPosts(index, count) {
   for (let i = index; i < index + count; i++) {
-    if (i >= posts.lenght) {
+    if (i >= posts.length) {
+      // console.log("length working");
       loadMoreButton.style.display = "none";
       break;
     }
 
     const detail = posts[i];
 
-    if (!detail) {
-      console.log("Error,undefined detail:", detail);
-      continue;
-    }
-
+    if(!detail){console.log("Error,undefined detail:", detail, i, posts.length);continue;}
+      
+    
     const container = document.createElement("div");
     const img = document.createElement("img");
     const link = document.createElement("a");
     const a = document.createElement("a");
 
     console.log("Detail:", detail);
+
 
     link.href = "/blogpost/index.html?id=" + detail.id;
     img.src = detail._embedded["wp:featuredmedia"][0].source_url;
@@ -49,6 +49,10 @@ function createPosts(index, count) {
     container.append(link);
     container.append(a);
 
+    loadMoreButton.innerText = "Load more";
+    loadMoreButton.classList.add("cta");
+    loadMoreButton.classList.add("cta-about-blog");
+    postsContainer.append(loadMoreButton);
     loadMoreButton.addEventListener("click", loadMore);
   }
 }
@@ -71,6 +75,7 @@ export async function getPosts() {
     loaderContainer.style.display = "none";
   }
 }
+
 
 export async function setUpBlogPage() {
   await getPosts();
