@@ -34,13 +34,14 @@ footer ul {
   color: var(--text-color-nav);
   font-family: Roboto, var(--font-fallback-roboto);
   text-transform: uppercase;
-  font-weight: 300;
+  
 }
 nav {
   font-size: 1.5rem;
 }
 footer {
   font-size: 1.3rem;
+  
 }
 
 .copyright {

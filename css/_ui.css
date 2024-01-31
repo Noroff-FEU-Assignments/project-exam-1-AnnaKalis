@@ -4,6 +4,10 @@
 
 /* Loader from https://css-loaders.com/dots/ */
 /* HTML: <div class="loader"></div> */
+:root {
+  --text-color-heading-blue: rgba(44, 61, 77, 1);
+}
+
 .loader {
     width: 60px;
     aspect-ratio: 4;
@@ -15,6 +19,23 @@
 
 .error
 
-.nav-icon {
-  display:none;
+
+
+.nav-menu-link:hover{
+  color: var(--text-color-heading-blue);
+  opacity: 0.8;
+ }
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: black;
+
 }

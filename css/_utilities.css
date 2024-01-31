@@ -22,7 +22,7 @@ header {
 }
 
 header,
-nav,
+.nav-menu,
 .footer,
 .nav-footer,
 .social-media {
@@ -30,6 +30,12 @@ nav,
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap:50px;
+  height: 120px;
+}
+
+header{
+  padding:0 30px;
 }
 .footer{
   flex-wrap: wrap;
@@ -42,14 +48,15 @@ nav,
 }
 
 header img {
-  padding: 30px;
   width: 250px;
 }
-nav a,
+
 .nav-footer a,
 .social-media a {
   padding-right: 50px;
 }
+
+
 .nav-footer a,
 .social-media a
 {

@@ -4,7 +4,6 @@ const postContainer = document.querySelector(".blog-post");
 const loaderContainer = document.createElement("div");
 
 function createPost(details) {
-  // loaderContainer.classList.remove("loader");
   loaderContainer.style.display = "none";
   const titleContainer = document.createElement("div");
   const postImage = document.createElement("img");
