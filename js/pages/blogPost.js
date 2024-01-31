@@ -4,7 +4,7 @@ const postContainer = document.querySelector(".blog-post");
 const loaderContainer = document.createElement("div");
 
 function createPost(details) {
-  loaderContainer.style.display = "none";
+  
   const titleContainer = document.createElement("div");
   const postImage = document.createElement("img");
   const postTitle = document.createElement("h1");
@@ -46,6 +46,8 @@ export async function getPost() {
     return await response.json();
   } catch (error) {
     postContainer.innerText = displayError("An error occured when uploading the post from the server!");
+  } finally {
+    loaderContainer.style.display = "none";
   }
 }
 

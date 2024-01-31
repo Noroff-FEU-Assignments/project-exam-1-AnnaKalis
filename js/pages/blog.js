@@ -2,28 +2,55 @@ import { displayError } from "../ui/displayError.js";
 
 const postsContainer = document.querySelector(".posts");
 const loaderContainer = document.createElement("div");
+const loadMoreButton = document.getElementById("load-more-btn");
 
-function createPosts(details) {
-  details.forEach(function (detail) {
-    // loaderContainer.classList.remove("loader");
-    loaderContainer.style.display = "none";
+let posts = [];
+let postsLoaded = 0;
+const perPage = 10;
+
+function loadMore() {
+  createPosts(postsLoaded, perPage);
+  postsLoaded += perPage;
+}
+
+function createPosts(index, count) {
+  for (let i = index; i < index + count; i++) {
+    if (i >= posts.lenght) {
+      loadMoreButton.style.display = "none";
+      break;
+    }
+
+    const detail = posts[i];
+
+    if (!detail) {
+      console.log("Error,undefined detail:", detail);
+      continue;
+    }
+
     const container = document.createElement("div");
     const img = document.createElement("img");
     const link = document.createElement("a");
     const a = document.createElement("a");
+
+    console.log("Detail:", detail);
+
     link.href = "/blogpost/index.html?id=" + detail.id;
     img.src = detail._embedded["wp:featuredmedia"][0].source_url;
     img.alt = detail._embedded["wp:featuredmedia"][0].alt_text;
     a.innerText = detail.title.rendered;
     a.href = "/blogpost/index.html?id=" + detail.id;
+
     img.classList.add("featured-image");
-    a.classList.add("post-title")
+    a.classList.add("post-title");
     container.classList.add("post-container");
+
     link.append(img);
     postsContainer.append(container);
     container.append(link);
     container.append(a);
-  });
+
+    loadMoreButton.addEventListener("click", loadMore);
+  }
 }
 
 export async function getPosts() {
@@ -33,18 +60,18 @@ export async function getPosts() {
 
   try {
     const response = await fetch(url);
-
     if (!response.ok) {
       throw new Error(`Network response was not ok (status: ${response.status})`);
     }
-
-    return await response.json();
+    posts = await response.json();
+    loadMore();
   } catch (error) {
     postsContainer.innerHTML = displayError("An error occured when uploading the posts from the server!");
+  } finally {
+    loaderContainer.style.display = "none";
   }
 }
 
 export async function setUpBlogPage() {
-  const getResults = await getPosts();
-  createPosts(getResults);
+  await getPosts();
 }
