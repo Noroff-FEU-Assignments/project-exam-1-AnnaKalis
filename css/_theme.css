@@ -52,14 +52,6 @@ body {
   font-family: Lora, serif;
 }
 
-.featured-blogpost-image {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-}
-
 .intro,
 .collaborate {
   background-position: center;
@@ -92,6 +84,15 @@ h2 {
 h1 {
   font-size: 2rem;
 }
+.wp-block-pullquote {
+  background-color: var(--picture-overlay-blue);
+  
+}
+
+.wp-block-pullquote p{
+  color: var(--background-text);
+  font-style: italic;
+}
 
 p {
   color: var(--text-color-blue);
@@ -110,7 +111,7 @@ p {
 
 .newsletter,
 .contact-info-form-and-text {
-    background-color: var(--background-color-newsletter);
+  background-color: var(--background-color-newsletter);
 }
 
 input,
@@ -118,4 +119,6 @@ textarea {
   font-size: 1rem;
   font-family: Roboto, var(--font-fallback-roboto);
 }
+
+
 /* .newsletter h2 */

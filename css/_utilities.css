@@ -21,7 +21,6 @@ header {
   z-index: 100;
 }
 
-
 header,
 nav,
 .footer,
@@ -109,7 +108,8 @@ h2 {
   text-align: left;
 }
 
-.about-story-text-2 {
+.about-story-text-2,
+.blog-post {
   grid-column: span 2;
 }
 
@@ -148,7 +148,7 @@ textarea,
   padding-left: 30px;
 }
 
-.cta-about {
+.cta-about-blog {
   display: inline-block;
   margin-bottom: 50px;
   margin-top: 0px;
@@ -181,14 +181,41 @@ textarea,
   max-height: 75vh;
 }
 
-
 .featured-image {
   min-height: 40vh;
   object-fit: cover;
   object-position: center;
-  position:relative;
+  position: relative;
 }
 
-.post-title{
+.post-title {
   text-align: left;
 }
+
+.featured-blogpost-image
+/* .wp-block-image */ {
+  width: 100vw;
+}
+.wp-block-heading {
+  margin: 0px auto;
+}
+.wp-block-image {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.blog-post-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 80vw;
+  margin: 30px auto;
+  text-align: left;
+}
+
+
+.blog-post-intro h1 {
+  margin: 30px auto 0px;
+  width: 80vw;
+}
+
