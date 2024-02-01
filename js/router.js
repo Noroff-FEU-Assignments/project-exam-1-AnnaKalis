@@ -5,7 +5,6 @@ import { homePage } from "./pages/home.js";
 import { setUpBlogPostPage } from "./pages/blogPost.js";
 
 
-
 export function router() {
   switch (window.location.pathname) {
     case "/":

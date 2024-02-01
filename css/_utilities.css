@@ -105,6 +105,21 @@ h2 {
   gap: 30px;
   width: 80vw;
   margin: 50px auto;
+  
+}
+
+.slider-post-container{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:30px;
+  width:80vw;
+  margin: 0 auto;
+  list-style: none;
+  padding:0px;
+}
+
+.featured{
+  margin: 50px auto;
 }
 
 .welcome-text,
