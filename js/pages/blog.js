@@ -51,7 +51,7 @@ function createPosts(index, count) {
 
     loadMoreButton.innerText = "Load more";
     loadMoreButton.classList.add("cta");
-    loadMoreButton.classList.add("cta-about-blog");
+    loadMoreButton.classList.add("load-more-btn");
     postsContainer.append(loadMoreButton);
     loadMoreButton.addEventListener("click", loadMore);
   }

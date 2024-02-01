@@ -127,10 +127,14 @@ h2 {
 }
 
 .about-story-text-2,
-.blog-post {
+.blog-post,
+.load-more-btn {
   grid-column: span 2;
 }
 
+.load-more-btn {
+  margin: 30px auto 0;
+}
 img {
   width: 100%;
   max-height: 40vh;
