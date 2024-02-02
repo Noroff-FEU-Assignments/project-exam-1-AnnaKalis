@@ -22,9 +22,6 @@ function createPosts(index, count) {
     }
 
     const detail = posts[i];
-
-    // if(!detail){console.log("Error,undefined detail:", detail, i, posts.length);continue;}
-      
     
     const container = document.createElement("div");
     const img = document.createElement("img");

@@ -1,13 +1,16 @@
 import { displayError } from "../ui/displayError.js";
+import { slidePosts } from "../ui/slider.js";
 
 const featuredPostsConatiner = document.querySelector(".slider-post-container");
 const loaderContainer = document.createElement("div");
+
 
 export function createFeaturedPosts(details) {
   console.log(details);
   details.forEach(function (detail) {
     loaderContainer.style.display = "none";
     const container = document.createElement("li");
+    
     const img = document.createElement("img");
     const link = document.createElement("a");
     const a = document.createElement("a");
@@ -21,10 +24,13 @@ export function createFeaturedPosts(details) {
     img.classList.add("featured-image");
     a.classList.add("post-title");
     container.classList.add("post-container");
+    container.classList.add("slide-post");
     link.append(img);
     featuredPostsConatiner.append(container);
     container.append(link);
     container.append(a);
+    console.log("Container width:", container.clientWidth);
+    
   });
 }
 
@@ -54,4 +60,5 @@ export async function getFeaturedPosts() {
 
 export async function homePage() {
   await getFeaturedPosts();
+  slidePosts();
 }
