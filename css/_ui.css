@@ -1,7 +1,5 @@
 /* In this file is styling for loader, error handling, navigation, header and footer included */
 
-
-
 /* Loader from https://css-loaders.com/dots/ */
 /* HTML: <div class="loader"></div> */
 :root {
@@ -9,33 +7,56 @@
 }
 
 .loader {
-    width: 60px;
-    aspect-ratio: 4;
-    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
-    clip-path: inset(0 100% 0 0);
-    animation: l1 1s steps(4) infinite;
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, #000 90%, #0000) 0 / calc(100% / 3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+@keyframes l1 {
+  to {
+    clip-path: inset(0 -34% 0 0);
   }
-  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+}
 
-.error
-
-
-
-.nav-menu-link:hover{
+.error .nav-menu-link:hover {
   color: var(--text-color-heading-blue);
   opacity: 0.8;
- }
+}
 
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
 }
 
-.bar{
+.bar {
   display: block;
   width: 30px;
   height: 3px;
   margin: 5px auto;
   background-color: black;
+}
+/* modal image */
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--text-color-heading-blue);
+  opacity: 0.8;
+}
+
+.modal-target-img:hover {
+  opacity: 0.8;
+}
+
+.modal-image{
+  width: 80vw;
+  margin: 0 auto;
 }

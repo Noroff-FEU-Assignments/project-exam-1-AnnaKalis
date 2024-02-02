@@ -16,7 +16,6 @@ function loadMore() {
 function createPosts(index, count) {
   for (let i = index; i < index + count; i++) {
     if (i >= posts.length) {
-      // console.log("length working");
       loadMoreButton.style.display = "none";
       break;
     }
