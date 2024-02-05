@@ -48,8 +48,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: var(--text-color-heading-blue);
-  opacity: 0.8;
+  background-color: rgba(44, 61, 77, 0.8);
 }
 
 .modal-target-img:hover {
@@ -59,4 +58,7 @@
 .modal-image{
   width: 80vw;
   margin: 0 auto;
+  min-height: 80vh;
+  /* opacity:1; */
 }
+

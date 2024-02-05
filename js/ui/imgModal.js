@@ -1,22 +1,31 @@
-const modal = document.querySelector(".modal");
-const modalTargetImg = document.querySelector(".modal-target-img");
-const modalImg = document.querySelector(".modal-image")
+const body = document.querySelector("body");
+const modal = document.createElement("div");
+const modalImg = document.createElement("img");
 
-function openImgModal() {
+
+function openImgModal(event) {
   modal.style.display = "block";
-  modalImg.src= modalTargetImg.src;
-  modalImg.alt = modalTargetImg.alt;
-};
+  const clickedImg = event.target;
+  modalImg.src = clickedImg.src;
+  modalImg.alt = clickedImg.alt;
+}
 
 function closeImgModal(event) {
-    // console.log(event);
+  // console.log(event);
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
 export function toggleImageModal() {
-  modalTargetImg.addEventListener("click", openImgModal);
+  const modalTargetImg = document.querySelectorAll(".modal-target-img");
+  body.append(modal);
+  modal.classList.add("modal");
+  modalImg.classList.add("modal-image");
+  modal.appendChild(modalImg);
+  modalTargetImg.forEach((img) => {
+    img.addEventListener("click", openImgModal);
+  });
   window.addEventListener("click", closeImgModal);
-  
 }
+

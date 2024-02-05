@@ -1,10 +1,10 @@
 import { displayError } from "../ui/displayError.js";
+import { toggleImageModal } from "../ui/imgModal.js";
 
 const postContainer = document.querySelector(".blog-post");
 const loaderContainer = document.createElement("div");
 
 function createPost(details) {
-  
   const titleContainer = document.createElement("div");
   const postImage = document.createElement("img");
   const postTitle = document.createElement("h1");
@@ -15,10 +15,11 @@ function createPost(details) {
   postContainer.append(titleContainer);
   postContainer.append(postText);
   postContainer.append(backToBlog);
-  postImage.src = details._embedded['wp:featuredmedia'][0].source_url
-  postImage.alt = details._embedded['wp:featuredmedia'][0].alt_text
+  postImage.src = details._embedded["wp:featuredmedia"][0].source_url;
+  postImage.alt = details._embedded["wp:featuredmedia"][0].alt_text;
   postImage.classList.add("featured-blogpost-image");
-  titleContainer.classList.add("blog-post-intro")
+
+  titleContainer.classList.add("blog-post-intro");
   postTitle.innerText = details.title.rendered;
   postText.innerHTML = details.content.rendered;
   postText.classList.add("blog-post-text");
@@ -26,6 +27,12 @@ function createPost(details) {
   backToBlog.classList.add("cta-about-blog");
   backToBlog.innerText = "Back to blog";
   backToBlog.href = "/blog/index.html";
+
+  const blogPostImages = postText.querySelectorAll("img");
+  blogPostImages.forEach((img) => {
+    img.classList.add("modal-target-img");
+  });
+  toggleImageModal();
   console.log(details);
 }
 
