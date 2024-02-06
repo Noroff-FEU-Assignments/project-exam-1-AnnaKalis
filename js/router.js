@@ -32,7 +32,7 @@ export function router() {
     case "/contact":
     case "/contact/index.html":
       console.log("Contact page");
-      setUpContactPage
+      setUpContactPage();
       break;
     default:
       console.log("404 - not found");

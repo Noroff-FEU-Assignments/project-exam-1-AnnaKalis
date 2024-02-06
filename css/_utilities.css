@@ -189,16 +189,6 @@ img {
   padding: 50px 0;
 }
 
-input {
-  padding: 5px;
-  margin-top: 5px;
-}
-
-label,
-textarea {
-  display: block;
-}
-textarea,
 .contact-info-text {
   margin: 0 auto;
 }
@@ -217,8 +207,25 @@ textarea,
   margin-bottom: 50px;
   margin-top: 0px;
 }
+ .contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px;
+  margin:50px auto;
+  width:80vw;
+ }
 
-.contact-info {
+ 
+
+ .contact-info-img {
+  max-height: 40vh;
+  padding:50px 0 0;
+ }
+
+ .contact-info-text{
+  padding: 50px 20px;
+ }
+/* .contact-info {
   width: 80vw;
   margin: 50px auto;
   display: grid;
@@ -227,12 +234,13 @@ textarea,
   padding: 50px 0;
 }
 
+
 .contact-info-form-and-text {
   padding: 50px 0;
 }
 
-.contact-input,
-.contact-info-text {
+/* .contact-input, */
+/* .contact-info-text {
   width: 90%;
 }
 
@@ -243,7 +251,7 @@ textarea,
 .contact-info-img {
   align-self: center;
   max-height: 75vh;
-}
+} */ 
 
 .featured-image {
   min-height: 40vh;

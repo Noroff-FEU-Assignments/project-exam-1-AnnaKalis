@@ -112,8 +112,14 @@ p {
 }
 
 .newsletter,
-.contact-info-form-and-text {
+.contact-form {
   background-color: var(--background-color-newsletter);
+}
+
+.contact-info-text,
+.contact-form {
+  background: rgb(221,225,220);
+  background: radial-gradient(circle, rgba(221,225,220,0.01) 0%, rgba(255,255,255,1) 50%, rgba(221,225,220,1) 100%);
 }
 
 input,

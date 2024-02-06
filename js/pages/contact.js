@@ -1,7 +1,11 @@
-function onSubmit (event) {
-    event.preventDefault();
-}
+import { validateForm } from "../ui/validateForm.js";
 
 export function setUpContactPage() {
-    document.forms.contact.addEventListener("submit",onSubmit)
+  let form = document.getElementById("form");
+  console.log(form);
+  form.addEventListener("submit", function (event) {
+    console.log("Form submittet");
+    event.preventDefault();
+    validateForm();
+  });
 }
