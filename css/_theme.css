@@ -54,7 +54,6 @@ footer {
 }
 nav,
 footer ul {
-  
   font-family: var(--font-sans-serif);
   text-transform: uppercase;
 }
@@ -158,19 +157,13 @@ button {
   background-color: var(--background-text);
 }
 
-
 /* 6. Newsletter and contact form */
 
 .contact-info-text,
 .contact-form,
 .newsletter {
   background: var(--background-color-newsletter);
-  background: radial-gradient(
-    circle,
-    rgba(221, 225, 220, 0.01) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(221, 225, 220, 1) 100%
-  );
+  background: linear-gradient(180deg, rgba(238,239,237,1) 0%, rgba(221,225,220,1) 100%); 
 }
 
 input,
