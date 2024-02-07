@@ -3,14 +3,19 @@
   .about-story-text-1,
   .about-story-img,
   .contact-info-img,
-  .contact-info-form-and-text {
-    grid-column: span 2;
+  /* .contact-info-form-and-text { */
+    {grid-column: span 2;
   }
 }
 
 @media (max-width: 1200px) {
   .about-welcome-img,
   .about-welcome-text {
+    grid-column: span 2;
+  }
+
+  .contact-info-text,
+  .contact-form{
     grid-column: span 2;
   }
 }
@@ -109,7 +114,8 @@
   .about-story,
   .posts,
   .intro-container,
-  .collaborate-container {
+  .collaborate-container,
+  .contact-info {
     width: 90vw;
   }
 }
