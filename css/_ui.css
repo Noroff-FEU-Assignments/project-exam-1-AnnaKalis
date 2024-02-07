@@ -68,12 +68,18 @@ fieldset {
   margin: 50px auto;
   width: 90%;
 }
+#newsletter-fieldset{
+  width: 50vw;
+  border:0;
+  margin: 0px auto;
+}
 
 legend {
   font-size: 1.25rem;
   padding: 0 10px;
 }
-.contact-form div {
+.contact-form div,
+.newsletter-form label {
   margin-top: 20px;
 }
 
@@ -102,6 +108,8 @@ input[type="email"],
 input[type="text"] {
   width: 100%;
 }
+
+
 
 
 input:focus,

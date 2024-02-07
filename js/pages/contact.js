@@ -5,12 +5,17 @@ export function setUpContactPage() {
   console.log(form);
   let submitButton = document.getElementById("submit-form-btn");
   console.log(submitButton);
-  submitButton.addEventListener("click", function(event)
-
-//   form.addEventListener("submit", function (event) 
-  {
-    console.log("Form submittet");
-    event.preventDefault();
-    validateForm();
-  });
+  submitButton.addEventListener(
+    "click",
+    function (event) //   form.addEventListener("submit", function (event)
+    {
+      console.log("Form submittet");
+      event.preventDefault();
+      let isValid = validateForm();
+      if (isValid) {
+        form.reset();
+    
+      }
+    }
+  );
 }
