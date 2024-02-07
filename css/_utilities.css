@@ -1,5 +1,15 @@
-/* In this file is styling with flex, grid, margins, padding, and  similar included */
+/* Styling with flex, grid, margins, padding, and  similar */
 
+/* 
+1. Body and main
+2. Header, footer, nav
+3. Headings,  titles, paragraps 
+4. Cta button and slider buttons 
+5. Sections
+6. Newsletter and contact form 
+*/
+
+/*1. Body and main */
 body {
   box-sizing: border-box;
   margin: 0px;
@@ -10,10 +20,12 @@ body {
 
 main {
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 100px;
   flex: 1;
   text-align: center;
 }
+
+/* 2. Header, footer, nav */
 
 header {
   position: fixed;
@@ -31,12 +43,13 @@ header,
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  height: 120px;
+  height: 100px;
 }
 
 header {
-  padding: 0 30px;
+  padding: 0 50px;
 }
+
 .footer {
   flex-wrap: wrap;
   justify-content: center;
@@ -48,7 +61,7 @@ header {
 }
 
 header img {
-  width: 250px;
+  width: 200px;
 }
 
 .nav-footer a,
@@ -66,8 +79,147 @@ header img {
   width: 30px;
 }
 
+.copyright {
+  width: auto;
+  padding-left: 30px;
+}
+
+/*  3. Headings,  titles, paragraps, images, pullquote */
 h2 {
   margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-post-intro h1 {
+  margin: 30px auto 0px;
+  width: 60vw;
+}
+
+.wp-block-heading {
+  margin: 0px auto;
+}
+
+.contact-info-img {
+  max-height: 40vh;
+  padding: 50px 0 0;
+}
+
+.featured-image {
+  min-height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+.featured-blogpost-image {
+  width: 100vw;
+}
+
+.wp-block-image {
+  margin: 0px auto;
+  width: 100%;
+}
+
+.contact-info-text {
+  padding: 50px 20px;
+}
+
+.blog-post-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 60vw;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.wp-block-pullquote p {
+  text-align: center;
+}
+
+.post-title {
+  text-align: left;
+}
+
+/* 4. Cta buttons and slider */
+.cta {
+  padding: 5px 50px;
+  margin-top: 30px;
+}
+
+.load-more-btn {
+  margin: 30px auto 0;
+}
+
+.cta-about-blog {
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-top: 0px;
+}
+
+.featured {
+  margin: 50px auto;
+}
+
+.slider {
+  position: relative;
+  width: 60vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-post-container {
+  height: 50vh;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.slide-post {
+  flex: 1 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-prev,
+.arrow-next {
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+
+.arrow-prev {
+  left: 20px;
+}
+
+.arrow-next {
+  right: 20px;
+}
+/* 5. Sections */
+
+.welcome,
+.about-welcome,
+.about-story,
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 60vw;
+  margin: 50px auto;
+}
+
+.line {
+  width: 30vw;
 }
 
 .intro,
@@ -89,66 +241,6 @@ h2 {
   width: 60vw;
 }
 
-.cta {
-  padding: 5px 50px;
-  margin-top: 30px;
-}
-
-.welcome,
-.about-welcome,
-.about-story,
-.posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 60vw;
-  margin: 50px auto;
-}
-/* carousel styling */
-.featured {
-  margin: 50px auto;
-}
-
-.slider {
-  position: relative;
-  width: 60vw;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.slider-post-container {
-  height: 50vh;
-  width:100%;
-  padding: 0;
-  margin:0 auto;
-  display: flex;
-  overflow:scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none; 
-}
-
-.slide-post {
-  flex: 1 0 100%;
-  width: 100%;
-  height: 100%;
-}
-
-.arrow-prev,
-.arrow-next{
-position:absolute;
-top: 40%;
-cursor: pointer;
-}
-
-.arrow-prev{
-  left:20px;
-}
-
-.arrow-next{
-  right:20px;
-}
-/* ----------------------------------------- */
 .welcome-text,
 .about-welcome-text {
   display: flex;
@@ -174,15 +266,7 @@ cursor: pointer;
   grid-column: span 2;
 }
 
-.load-more-btn {
-  margin: 30px auto 0;
-}
-img {
-  width: 100%;
-  max-height: 40vh;
-  object-fit: cover;
-  object-position: center;
-}
+/* 6. Newsletter and contact form  */
 
 .newsletter-container {
   display: block;
@@ -192,107 +276,12 @@ img {
 .contact-info-text {
   margin: 0 auto;
 }
-
-.line {
-  width: 30vw;
-}
-
-.copyright {
-  width: auto;
-  padding-left: 30px;
-}
-
-.cta-about-blog {
-  display: inline-block;
-  margin-bottom: 50px;
-  margin-top: 0px;
-}
- .contact-info {
+.contact-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap:30px;
-  margin:50px auto;
-  width:80vw;
- }
-
- 
-
- .contact-info-img {
-  max-height: 40vh;
-  padding:50px 0 0;
- }
-
- .contact-info-text{
-  padding: 50px 20px;
- }
-/* .contact-info {
-  width: 80vw;
+  gap: 30px;
   margin: 50px auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 50px 0;
-}
-
-
-.contact-info-form-and-text {
-  padding: 50px 0;
-}
-
-/* .contact-input, */
-/* .contact-info-text {
-  width: 90%;
-}
-
-.contact-textarea {
-  min-height: 150px;
-}
-
-.contact-info-img {
-  align-self: center;
-  max-height: 75vh;
-} */ 
-
-.featured-image {
-  min-height: 40vh;
-  object-fit: cover;
-  object-position: center;
-  position: relative;
-}
-
-.post-title {
-  text-align: left;
-}
-
-.featured-blogpost-image
-/* .wp-block-image */ {
-  width: 100vw;
-}
-.wp-block-heading {
-  margin: 0px auto;
-}
-.wp-block-image {
-  margin: 0px auto;
-  width: 100%;
-}
-
-.blog-post-text {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  width: 80vw;
-  margin: 30px auto;
-  text-align: left;
-}
-
-.wp-block-pullquote p {
-  text-align: center;
-}
-
-.blog-post-intro h1 {
-  margin: 30px auto 0px;
   width: 80vw;
 }
 
-
-/* Image modal */
+/* -------------------------------- */

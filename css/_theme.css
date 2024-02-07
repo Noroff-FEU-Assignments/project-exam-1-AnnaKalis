@@ -1,5 +1,4 @@
 /* Colour and typography */
-
 :root {
   --background-header-footer: rgba(237, 240, 242, 1);
   --background-nav-mobile: rgba(247, 247, 247, 1);
@@ -28,16 +27,23 @@
   --font-size-large: 1.2rem;
   --font-size-medium: 1rem;
   --font-size-small: 0.8rem;
-  
 }
+/* 
+1. Body 
+2. Header, footer, nav
+3. Headings,  titles, paragraps 
+4. Cta button and slider 
+5. Intro section and collaborate section
+6. Newsletter and contact form 
+*/
 
-/* 1.Body */
+/* 1. Body */
 
 body {
   font-family: var(--font-serif);
 }
 
-/* 2. Header, footer, nav -  */
+/* 2. Header, footer, nav */
 header,
 footer {
   background-color: var(--background-header-footer);
@@ -51,7 +57,6 @@ footer ul {
   color: var(--text-color-nav);
   font-family: var(--font-sans-serif);
   text-transform: uppercase;
-  
 }
 nav {
   font-size: var(--font-size-large);
@@ -81,7 +86,7 @@ h2,
 
 .post-title {
   font-size: var(--font-size-large);
-  background-color:var(--background-text);
+  background-color: var(--background-text);
 }
 
 p {
@@ -90,7 +95,17 @@ p {
   line-height: 1.8rem;
 }
 
-/* 4. Cta button and slider buttons */
+.wp-block-pullquote {
+  background-color: var(--picture-overlay-blue);
+}
+
+.wp-block-pullquote p {
+  color: var(--background-text);
+  font-style: italic;
+  font-size: var(--font-size-large);
+}
+
+/* 4. Cta buttons and slider */
 
 .cta {
   background-color: var(--dark-button-color);
@@ -100,8 +115,8 @@ p {
   font-size: var(--font-size-medium);
 }
 
-button{
-  border:0;
+button {
+  border: 0;
 }
 
 .arrow-prev,
@@ -140,34 +155,21 @@ button{
 }
 
 
-/* 5. Pullquote */
-
-.wp-block-pullquote {
-  background-color: var(--picture-overlay-blue);
-}
-
-.wp-block-pullquote p{
-  color: var(--background-text);
-  font-style: italic;
-  font-size: var(--font-size-large);
-}
-
 /* 6. Newsletter and contact form */
 
-.newsletter,
-.contact-form {
-  background-color: var(--background-color-newsletter);
-}
-
 .contact-info-text,
-.contact-form {
+.contact-form,
+.newsletter {
   background: var(--background-color-newsletter);
-  background: radial-gradient(circle, rgba(221,225,220,0.01) 0%, rgba(255,255,255,1) 50%, rgba(221,225,220,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(221, 225, 220, 0.01) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(221, 225, 220, 1) 100%
+  );
 }
 
 input,
 textarea {
   font-family: var(--font-sans-serif);
 }
-
-
