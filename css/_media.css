@@ -25,6 +25,9 @@
   .hamburger {
     display: block;
   }
+  .bar{
+    color: var(--text-color-nav);
+   }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;

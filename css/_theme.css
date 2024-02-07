@@ -54,12 +54,16 @@ footer {
 }
 nav,
 footer ul {
-  color: var(--text-color-nav);
+  
   font-family: var(--font-sans-serif);
   text-transform: uppercase;
 }
 nav {
   font-size: var(--font-size-large);
+}
+
+nav a {
+  color: var(--text-color-blue);
 }
 
 .copyright {
