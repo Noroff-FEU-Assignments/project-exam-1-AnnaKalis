@@ -9,24 +9,36 @@ function createPost(details) {
   const postImage = document.createElement("img");
   const postTitle = document.createElement("h1");
   const postText = document.createElement("div");
+  const postData = document.createElement("div");
+  const postAuthor = document.createElement("div");
+  const postDate = document.createElement("div");
+  const postCategory = document.createElement("div");
   const backToBlog = document.createElement("a");
   titleContainer.append(postImage);
   titleContainer.append(postTitle);
   postContainer.append(titleContainer);
   postContainer.append(postText);
+  postContainer.append(postData);
+  postData.append(postAuthor);
+  postData.append(postDate);
+  postData.append(postCategory);
   postContainer.append(backToBlog);
   postImage.src = details._embedded["wp:featuredmedia"][0].source_url;
   postImage.alt = details._embedded["wp:featuredmedia"][0].alt_text;
-  postImage.classList.add("featured-blogpost-image");
-
-  titleContainer.classList.add("blog-post-intro");
   postTitle.innerText = details.title.rendered;
   postText.innerHTML = details.content.rendered;
-  postText.classList.add("blog-post-text");
-  backToBlog.classList.add("cta");
-  backToBlog.classList.add("cta-about-blog");
+  postAuthor.innerText = "Author: " + details._embedded.author[0].name;
+  postDate.innerText = "Published: " + details.date.substring(0,10);
+  postCategory.innerText = "Category: " + details._embedded["wp:term"][0][0].name;
   backToBlog.innerText = "Back to blog";
   backToBlog.href = "/blog/index.html";
+  postImage.classList.add("featured-blogpost-image");
+  titleContainer.classList.add("blog-post-intro");
+  postText.classList.add("blog-post-text");
+  postData.classList.add("post-data");
+  backToBlog.classList.add("cta");
+  backToBlog.classList.add("cta-about-blog");
+  
 
   const blogPostImages = postText.querySelectorAll("img");
   blogPostImages.forEach((img) => {
