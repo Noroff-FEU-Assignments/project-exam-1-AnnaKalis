@@ -185,6 +185,7 @@ img {
   overflow: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  scrollbar-gutter: none;
   -ms-overflow-style: none;
 }
 
