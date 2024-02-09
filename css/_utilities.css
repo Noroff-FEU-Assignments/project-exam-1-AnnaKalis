@@ -79,7 +79,7 @@ header img {
 }
 
 .social-media img {
-  width: 30px;
+  width: 28px;
 }
 
 .copyright {
@@ -276,9 +276,7 @@ img {
   padding: 50px 0;
 }
 
-.contact-info-text {
-  margin: 0 auto;
-}
+
 .contact-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

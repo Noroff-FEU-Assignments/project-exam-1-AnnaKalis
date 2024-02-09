@@ -56,4 +56,14 @@ export function validateForm() {
     message.classList.add("valid");
     formErrorMsg[3].innerHTML ="";
   }
+
+  let valid = false;
+  
+  if (message.value.length>25 && subject.value.length>15 && emailTestResult && name.value.length>5)
+  {valid = true;}
+
+  if (valid === true) {
+    location.href="/contactsuccess/index.html";}
+
+  
 }
