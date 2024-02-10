@@ -31,7 +31,8 @@
   .about-story,
   .posts,
   .intro-container,
-  .collaborate-container {
+  .collaborate-container,
+  .footer {
     width: 80vw;
   }
 }
@@ -95,10 +96,6 @@
     padding-bottom: 0px;
   }
 
-  .nav-footer a,
-  .social-media a {
-    padding-right: 30px;
-  }
 
   footer {
     font-size: 1rem;
@@ -117,7 +114,12 @@
   .posts,
   .intro-container,
   .collaborate-container,
-  .contact-info {
+  .contact-inf,
+  .footer {
     width: 90vw;
+  }
+
+  .footer{
+    justify-content: center;
   }
 }

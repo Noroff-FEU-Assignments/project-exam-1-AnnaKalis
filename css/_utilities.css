@@ -36,6 +36,15 @@ header {
 
 
 .nav-menu{gap: 50px;}
+
+.nav-footer,
+.social-media {
+  gap:30px;
+  padding-left: 0px;
+}
+
+
+
 header,
 .nav-menu,
 .footer,
@@ -55,22 +64,20 @@ header {
 
 .footer {
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 60vw;
+  margin:0px auto;
 }
 
-.nav-footer,
-.social-media {
-  margin: 0px auto;
-}
 
 header img {
   width: 200px;
 }
 
-.nav-footer a,
+/* .nav-footer a,
 .social-media a {
-  padding-right: 50px;
-}
+  padding-right: 20px;
+} */
 
 .nav-footer a,
 .social-media a {
