@@ -87,6 +87,10 @@ h2,
   font-weight: 600;
 }
 
+.thrive-heading{
+  text-transform: uppercase;
+}
+
 .post-title {
   font-size: var(--font-size-large);
   background-color: var(--background-text);
