@@ -10,7 +10,9 @@
 
 @media (max-width: 1200px) {
   .about-welcome-img,
-  .about-welcome-text {
+  .about-welcome-text,
+  .about-story-text-1,
+  .about-story-img {
     grid-column: span 2;
   }
 
