@@ -231,6 +231,15 @@ img {
   margin: 50px auto;
 }
 
+.post-data{
+  display: flex;
+ flex-direction: row;
+ gap:20px;
+ margin:0 auto;
+ padding-bottom: 30px;
+ width:60vw;
+}
+
 .line {
   width: 30vw;
 }
