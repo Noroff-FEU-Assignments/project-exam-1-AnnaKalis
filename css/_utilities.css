@@ -144,8 +144,14 @@ img {
   text-align: left;
 }
 
+.wp-block-pullquote{
+  width:40vw;
+  margin: 0 auto;
+}
+
 .wp-block-pullquote p {
   text-align: center;
+  
 }
 
 .post-title {

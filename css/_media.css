@@ -3,8 +3,8 @@
   .about-story-text-1,
   .about-story-img,
   .contact-info-img,
-  /* .contact-info-form-and-text { */
-    {grid-column: span 2;
+  /* .contact-info-form-and-text { */ {
+    grid-column: span 2;
   }
 }
 
@@ -17,7 +17,7 @@
   }
 
   .contact-info-text,
-  .contact-form{
+  .contact-form {
     grid-column: span 2;
   }
 }
@@ -43,7 +43,9 @@
   .post-container {
     grid-column: span 2;
   }
-
+  .wp-block-pullquote {
+    width: 60vw;
+  }
   .hamburger {
     display: block;
   }
@@ -96,7 +98,6 @@
     padding-bottom: 0px;
   }
 
-
   footer {
     font-size: 1rem;
   }
@@ -119,11 +120,15 @@
     width: 90vw;
   }
 
-  .footer{
+  .footer {
     justify-content: center;
   }
 
-  .posts{
+  .posts {
     gap: 50px;
+  }
+
+  .wp-block-pullquote {
+    width: 70vw;
   }
 }
