@@ -191,10 +191,10 @@ img {
   padding: 0;
   margin: 0 auto;
   display: flex;
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  scrollbar-gutter: none;
   -ms-overflow-style: none;
 }
 
