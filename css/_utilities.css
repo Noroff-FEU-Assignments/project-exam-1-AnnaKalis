@@ -30,7 +30,7 @@ main {
 /* 2. Header, footer, nav */
 
 header {
-  position: fixed;
+  /* position: fixed; */
   width: 100vw;
   z-index: 100;
   height: 100px;
