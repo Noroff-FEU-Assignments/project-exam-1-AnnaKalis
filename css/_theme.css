@@ -87,7 +87,7 @@ h2,
   font-weight: 600;
 }
 
-.thrive-heading{
+.thrive-heading {
   text-transform: uppercase;
 }
 
@@ -112,11 +112,9 @@ p {
   font-size: var(--font-size-large);
 }
 
-
-.post-data
-{
- opacity:0.7;
- font-family: var(--font-sans-serif);
+.post-data {
+  opacity: 0.7;
+  font-family: var(--font-sans-serif);
 }
 
 /* 4. Cta buttons and slider */
@@ -166,6 +164,16 @@ button {
 .collaborate-container {
   background-color: var(--background-text);
 }
+#about-intro-container,
+#blog-intro-container,
+#contact-intro-container {
+  background-color: transparent;
+}
+#about-intro-container h1,
+#blog-intro-container h1,
+#contact-intro-container h1 {
+  color: var(--background-text);
+}
 
 /* 6. Newsletter and contact form */
 
@@ -173,7 +181,7 @@ button {
 .contact-form,
 .newsletter {
   background: var(--background-color-newsletter);
-  background: linear-gradient(180deg, rgba(238,239,237,1) 0%, rgba(221,225,220,1) 100%); 
+  background: linear-gradient(180deg, rgba(238, 239, 237, 1) 0%, rgba(221, 225, 220, 1) 100%);
 }
 
 input,

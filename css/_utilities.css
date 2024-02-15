@@ -40,11 +40,12 @@ header {
 .nav-menu {
   display:flex;
   align-items: center;
+  gap:50px;
 }
 
-.nav-menu-link{
+/* .nav-menu-link{
   padding-right: 50px;
-}
+} */
 
 .nav-footer,
 .social-media {
@@ -248,6 +249,10 @@ img {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.other-info{
+  min-height: 30vh;
 }
 
 .intro-container,
