@@ -33,7 +33,7 @@
   .intro-container,
   .collaborate-container,
   .footer {
-    width: 80vw;
+    width: 80%;
   }
 }
 
@@ -44,7 +44,7 @@
     grid-column: span 2;
   }
   .wp-block-pullquote {
-    width: 60vw;
+    width: 70%;
   }
   .hamburger {
     display: block;
@@ -73,7 +73,7 @@
     top: 100px;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     align-items: center;
     transition: 0.4s;
@@ -117,7 +117,7 @@
   .collaborate-container,
   .contact-inf,
   .footer {
-    width: 90vw;
+    width: 90%;
   }
 
   .footer {
@@ -129,13 +129,13 @@
   }
 
   .wp-block-pullquote {
-    width: 70vw;
+    width: 80%;
   }
 
   .post-data{
     flex-direction: column;
     align-items: flex-start;
-    width:90vw;
+    width:90%;
     gap:10px;
   }
 }
