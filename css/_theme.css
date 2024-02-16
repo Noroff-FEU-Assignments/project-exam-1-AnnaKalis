@@ -5,24 +5,15 @@
   --background-color-newsletter: rgba(221, 225, 220, 1);
   --background-text: rgba(255, 255, 255, 1);
   --text-color-nav: rgba(22, 30, 38, 1);
-  --picture-overlay-green: rgba(154, 166, 151, 0.9);
   --picture-overlay-blue: rgba(79, 93, 107, 0.87);
   --dark-button-color: rgba(37, 51, 64, 1);
-  --dark-button-color-hover: rgba(37, 51, 64, 0.8);
   --dark-button-text-color: rgba(237, 240, 242, 1);
-  --light-button-color: rgba(255, 255, 255, 1);
-  --light-button-color-hover: rgba(238, 239, 237, 1);
   --text-color-heading-blue: rgba(44, 61, 77, 1);
   --text-color-blue: rgba(22, 30, 38, 1);
   --text-color-heading-green: rgba(31, 33, 30, 1);
   --text-color-green: rgba(31, 33, 30, 1);
-  --form-text-color: rgba(72, 72, 72, 1);
-  --form-frame-color: rgba(72, 72, 72, 1);
-  --form-background-color: rgba(255, 255, 255, 1);
-  --line-color: rgba(79, 93, 107, 1);
   --font-serif: Lora, serif;
   --font-sans-serif: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-size-xx-large: 1.8rem;
   --font-size-x-large: 1.8rem;
   --font-size-large: 1.2rem;
   --font-size-medium: 1rem;
@@ -72,12 +63,9 @@ nav a {
 
 /* 3. Headings,  titles, paragraps */
 
+h1,
 h2 {
   font-size: var(--font-size-x-large);
-}
-
-h1 {
-  font-size: var(--font-size-xx-large);
 }
 
 h1,
@@ -184,7 +172,14 @@ button {
   background: linear-gradient(180deg, rgba(238, 239, 237, 1) 0%, rgba(221, 225, 220, 1) 100%);
 }
 
-input,
-textarea {
-  font-family: var(--font-sans-serif);
+.newsletter-container h2,
+.contact-info-text h2,
+legend {
+  color: var(--text-color-heading-green);
 }
+
+.newsletter-container p,
+.contact-info-text p {
+  color: var(--text-color-green);
+}
+

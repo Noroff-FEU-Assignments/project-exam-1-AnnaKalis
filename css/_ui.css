@@ -79,7 +79,6 @@ nav a:hover,
   width: 80vw;
   margin: 0 auto;
   min-height: 80vh;
-  /* opacity:1; */
 }
 /* form styling */
 
@@ -98,7 +97,6 @@ legend {
   font-size: 1.8rem;
   padding: 0 10px;
   font-weight: 600;
-  color: rgba(44, 61, 77, 1);
 }
 .contact-form div,
 .newsletter-form label {
@@ -115,17 +113,20 @@ textarea {
   text-align: left;
 }
 
-input {
-  padding: 5px;
-  border: solid 1px rgba(72, 72, 72, 1);
-}
-
+input,
 textarea {
   padding: 5px;
   border: solid 1px rgba(72, 72, 72, 1);
+  font-family: var(--font-sans-serif);
+  font-size: var(--font-size-medium);
+}
+
+
+textarea{
   width: 100%;
   min-height: 150px;
 }
+
 input[type="email"],
 input[type="text"] {
   width: 100%;
@@ -147,21 +148,12 @@ textarea:focus {
 }
 
 .form-error {
-  font-family: Roboto, var(--font-fallback-roboto);
+  font-family: var(--font-sans-serif);
   font-size: 0.8rem;
   text-align: left;
   color: rgba(150, 51, 51, 1);
 }
 label {
-  font-family: Roboto, var(--font-fallback-roboto);
+  font-family: var(--font-sans-serif);
   font-size: 0.8rem;
 }
-
-/* Error */
-
-.error {
-  color: var(--text-color-heading-blue);
-  opacity: 0.8;
-}
-
-/*  use felles id for the input and text area so button is not marked with green line...*/

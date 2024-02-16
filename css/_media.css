@@ -94,9 +94,7 @@
 }
 
 @media (max-width: 750px) {
-  .nav-footer a {
-    padding-bottom: 0px;
-  }
+  
 
   footer {
     font-size: 1rem;
@@ -120,9 +118,7 @@
     width: 90%;
   }
 
-  .footer {
-    justify-content: center;
-  }
+
 
   .posts {
     gap: 50px;
@@ -137,5 +133,15 @@
     align-items: flex-start;
     width:90%;
     gap:10px;
+  }
+}
+
+@media (max-width: 490px){
+  .footer {
+    justify-content: center;
+  }
+
+  .nav-footer a {
+    padding-bottom: 0px;
   }
 }
