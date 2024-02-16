@@ -6,7 +6,6 @@ const loaderContainer = document.createElement("div");
 
 
 export function createFeaturedPosts(details) {
-  console.log(details);
   details.forEach(function (detail) {
     loaderContainer.style.display = "none";
     const container = document.createElement("li");
@@ -29,8 +28,6 @@ export function createFeaturedPosts(details) {
     featuredPostsConatiner.append(container);
     container.append(link);
     container.append(a);
-    console.log("Container width:", container.clientWidth);
-    
   });
 }
 

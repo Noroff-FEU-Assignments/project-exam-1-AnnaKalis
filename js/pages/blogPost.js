@@ -45,7 +45,6 @@ function createPost(details) {
     img.classList.add("modal-target-img");
   });
   toggleImageModal();
-  console.log(details);
 }
 
 export async function getPost() {

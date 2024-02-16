@@ -9,13 +9,11 @@ export function router() {
   switch (window.location.pathname) {
     case "/":
     case "/index.html":
-      console.log("Home page");
       homePage();
       break;
     case "/about/":
     case "/about":
     case "/about/index.html":
-      console.log("About page");
       break;
     case "/blog/":
     case "/blog":
@@ -25,13 +23,11 @@ export function router() {
     case "/blogpost/":
     case "/blogpost":
     case "/blogpost/index.html":
-      console.log("Blog post page");
       setUpBlogPostPage();
       break;
     case "/contact/":
     case "/contact":
     case "/contact/index.html":
-      console.log("Contact page");
       setUpContactPage();
       break;
     default:

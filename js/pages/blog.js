@@ -27,8 +27,6 @@ function createPosts(index, count) {
     const link = document.createElement("a");
     const a = document.createElement("a");
 
-    console.log("Detail:", detail);
-
 
     link.href = "/blogpost/index.html?id=" + detail.id;
     img.src = detail._embedded["wp:featuredmedia"][0].source_url;

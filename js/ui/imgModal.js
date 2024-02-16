@@ -11,7 +11,6 @@ function openImgModal(event) {
 }
 
 function closeImgModal(event) {
-  // console.log(event);
   if (event.target == modal) {
     modal.style.display = "none";
   }
