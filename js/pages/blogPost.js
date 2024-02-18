@@ -14,6 +14,7 @@ function createPost(details) {
   const postDate = document.createElement("div");
   const postCategory = document.createElement("div");
   const backToBlog = document.createElement("a");
+  let title = document.querySelector("title");
   titleContainer.append(postImage);
   titleContainer.append(postTitle);
   postContainer.append(titleContainer);
@@ -31,6 +32,7 @@ function createPost(details) {
   postDate.innerText = "Published: " + details.date.substring(0,10);
   postCategory.innerText = "Category: " + details._embedded["wp:term"][0][0].name;
   backToBlog.innerText = "Back to blog";
+  title.innerText = "Blog | " + details.title.rendered;
   backToBlog.href = "/blog/index.html";
   postImage.classList.add("featured-blogpost-image");
   titleContainer.classList.add("blog-post-intro");
@@ -46,6 +48,7 @@ function createPost(details) {
   });
   toggleImageModal();
 }
+
 
 export async function getPost() {
   const queryString = document.location.search;
